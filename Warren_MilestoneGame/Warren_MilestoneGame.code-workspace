@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "Warren_MilestoneGame",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Warren_MilestoneGame Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGame IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGame IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGameEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGameEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_MilestoneGameEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_MilestoneGameEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_MilestoneGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Warren_MilestoneGame (Debug)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "Warren_MilestoneGame Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGame (DebugGame)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "Warren_MilestoneGame Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGame (Development)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "Warren_MilestoneGame Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGame (Test)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "Warren_MilestoneGame Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGame (Shipping)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "Warren_MilestoneGame Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGameEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "Warren_MilestoneGameEditor Mac Debug Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGameEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "Warren_MilestoneGameEditor Mac DebugGame Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_MilestoneGameEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "Warren_MilestoneGameEditor Mac Development Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/ianwarren/Documents/Warren_GP2/Warren_MilestoneGame/Warren_MilestoneGame.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
