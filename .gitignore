@@ -1,6 +1,7 @@
 # from https://github.com/github/gitignore/blob/main/UnrealEngine.gitignore
 # Visual Studio 2015 user specific files
 .vs/
+/.vscode/*
 
 # JetBrains/Rider
 .idea
