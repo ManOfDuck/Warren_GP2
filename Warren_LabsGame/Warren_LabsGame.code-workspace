@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "Warren_LabsGame",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Warren_LabsGame Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"Mac",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Test",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGame IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGame IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGame",
+					"IOS",
+					"Shipping",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGameEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Debug",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGameEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Warren_LabsGameEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "Warren_LabsGameEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Warren_LabsGameEditor",
+					"Mac",
+					"Development",
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Warren_LabsGame (Debug)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "Warren_LabsGame Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGame (DebugGame)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "Warren_LabsGame Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGame (Development)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "Warren_LabsGame Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGame (Test)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "Warren_LabsGame Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGame (Shipping)",
+				"request": "launch",
+				"program": "/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "Warren_LabsGame Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGameEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "Warren_LabsGameEditor Mac Debug Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGameEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "Warren_LabsGameEditor Mac DebugGame Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Warren_LabsGameEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "Warren_LabsGameEditor Mac Development Build",
+				"args": [
+					"/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/ianwarren/Documents/Warren_GP2/Warren_LabsGame/Warren_LabsGame.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
