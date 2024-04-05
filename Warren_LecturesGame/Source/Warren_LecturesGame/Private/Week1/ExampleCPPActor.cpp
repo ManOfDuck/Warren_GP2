@@ -2,6 +2,7 @@
 
 
 #include "Week1/ExampleCPPActor.h"
+#include "ExampleCPPActor.h"
 
 // Sets default values
 AExampleCPPActor::AExampleCPPActor()
@@ -34,3 +35,12 @@ void AExampleCPPActor::Tick(float DeltaTime)
 	}
 }
 
+void AExampleCPPActor::DoThing()
+{
+    UE_LOG(LogTemp, Display, TEXT("Do a thing!"))
+}
+
+int32 AExampleCPPActor::ReturnThing(int32 A, int32 B)
+{
+    return A + B;
+}
